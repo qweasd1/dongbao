@@ -875,9 +875,9 @@ detect-indent@^4.0.0:
   dependencies:
     repeating "^2.0.0"
 
-dongbao-state@^0.1.7:
-  version "0.1.7"
-  resolved "https://registry.yarnpkg.com/dongbao-state/-/dongbao-state-0.1.7.tgz#f8951e2065a50e635d456b42994c5f3d89e67fbc"
+dongbao-state@0.1.8:
+  version "0.1.8"
+  resolved "https://registry.yarnpkg.com/dongbao-state/-/dongbao-state-0.1.8.tgz#ca3244c57b6fe8ca4b9a897bc24a3f7fb1351880"
 
 ecc-jsbn@~0.1.1:
   version "0.1.1"
