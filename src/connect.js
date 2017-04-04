@@ -4,6 +4,8 @@
 'use strict'
 import {connect as reactReduxConnect} from 'react-redux'
 import {createRalativePathSelector,parsePaths} from 'dongbao-state'
+import {createCalcWithStates} from './calcWithStates'
+
 
 
 let options = {
@@ -22,13 +24,6 @@ export function connect({
   map // required
 }) {
   let paths = parsePaths(dir)
-  let stateSelectors =  states.map(statePath=>createRalativePathSelector(paths,statePath))
-  
-  function mapStateToProps(state) {
-    
-    return map.apply(null,stateSelectors.map(selector=>selector(state)))
-  }
-  
-  return reactReduxConnect(mapStateToProps)
+  return reactReduxConnect(createCalcWithStates(paths,states,map))
 }
 
