@@ -8,22 +8,22 @@ import {createCalcWithStates} from './calcWithStates'
 
 
 
-let options = {
-  dir:__dirname,
-  states:[".","/login",".."],
-  map:(state,loginState,Root)=>{
-    return {
-      
-    }
-  }
-}
+// let options = {
+//   path:__dirname,
+//   states:[".","/login",".."],
+//   map:(state,loginState,Root)=>{
+//     return {
+//
+//     }
+//   }
+// }
 
 export function connect({
-  dir="/src", // points to root if not provide
+  path="/src", // points to root if not provide
   states=["."], // points to current state if not provide
   map // required
 }) {
-  let paths = parsePaths(dir)
+  let paths = parsePaths(path)
   return reactReduxConnect(createCalcWithStates(paths,states,map))
 }
 
