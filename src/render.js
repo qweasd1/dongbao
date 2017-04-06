@@ -9,16 +9,16 @@ import {Provider} from 'react-redux'
 
 
 
-export function render(RootComponent,storeOptions) {
+export function render(root,storeOptions) {
   // TODO: add more check (e.g. whether it's react component) in the future
-  if (!RootComponent) {
+  if (!root) {
     throw new Error("component is needed for render")
   }
   let store = createStore(storeOptions)
   
   global.document && reactRender(
     <Provider store={store}>
-      <RootComponent></RootComponent>
+      {root}
     </Provider>,
     global.document.getElementById('root')
   )
