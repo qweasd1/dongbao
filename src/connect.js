@@ -8,7 +8,7 @@ import {createCalcWithStates} from './calcWithStates'
 
 
 const mapToFirstState = (state)=>{
-  return state
+  return {state}
 }
 
 // let options = {
