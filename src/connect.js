@@ -19,7 +19,7 @@ import {createCalcWithStates} from './calcWithStates'
 // }
 
 export function connect({
-  path="/src", // points to root if not provide
+  path, // points to root if not provide
   states=["."], // points to current state if not provide
   map // required
 }) {
