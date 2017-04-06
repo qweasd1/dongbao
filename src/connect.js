@@ -21,12 +21,22 @@ const mapToFirstState = (state)=>{
 //   }
 // }
 
-export function connect({
+
+function connectImpl({
   path, // points to root if not provide
   states=["."], // points to current state if not provide
   map = mapToFirstState // just map to the first state if not provide
 }) {
   let paths = parsePaths(path)
   return reactReduxConnect(createCalcWithStates(paths,states,map))
+}
+
+export function  connect(options){
+  if (typeof options === "function") {
+    return connectImpl({})(options)
+  }
+  else {
+    return connectImpl(options)
+  }
 }
 
