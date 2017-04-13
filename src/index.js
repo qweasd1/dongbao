@@ -4,9 +4,10 @@
 'use strict'
 import {render} from './render'
 import {connect} from './connect'
-import {State,Actions,States} from 'dongbao-state'
+import {State,Actions,States,getState} from 'dongbao-state'
 import {createCalcWithStates} from './calcWithStates'
 import {createStore} from './createStore'
+ 
 
 
 
@@ -19,7 +20,7 @@ module.exports = {
   State,
   Actions,
   States,
-  
+  getState,
   createStore,
   
   // utils
