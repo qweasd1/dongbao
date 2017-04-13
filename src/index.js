@@ -6,6 +6,8 @@ import {render} from './render'
 import {connect} from './connect'
 import {State,Actions,States} from 'dongbao-state'
 import {createCalcWithStates} from './calcWithStates'
+import {createStore} from './createStore'
+
 
 
 module.exports = {
@@ -17,6 +19,8 @@ module.exports = {
   State,
   Actions,
   States,
+  
+  createStore,
   
   // utils
   createCalcWithStates
